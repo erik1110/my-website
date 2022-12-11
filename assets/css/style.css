@@ -86,7 +86,10 @@ h6 {
   margin: 15px auto;
   display: block;
   width: 120px;
+  height: 120px;
   border: 8px solid #2c2f3f;
+  object-fit: cover;
+  object-position: center;
 }
 
 #header .profile h1 {
@@ -228,7 +231,7 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top center;
+  background: url("../img/hero-bg.png") center;
   background-size: cover;
 }
 
@@ -417,42 +420,46 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Akills
+# skills
 --------------------------------------------------------------*/
-.skills .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
-}
-
-.skills .progress .skill {
-  padding: 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
+.skills .skills-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
   color: #050d18;
 }
-
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
+.skills .skills-item ul {
+  padding-left: 20px;
 }
 
-.skills .progress-bar-wrap {
-  background: #dce8f8;
-  height: 10px;
+.skills .skills-item ul li {
+  font-size: 24px;
+  padding-bottom: 10px;
 }
-
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: #149ddd;
+.skills .skills-icon {
+  height: 100px;
 }
-
+.skills .skills-icon .frontend3{
+  width: 160px;
+  height: 70px;
+}
+.skills .skills-icon .flask{
+  width: 100px;
+  height: 80px;
+}
+.skills .skills-icon .nginx{
+  width: 100px;
+  height: 50px;
+}
+.skills .skills-icon .gcp{
+  width: 100px;
+  height: 70px;
+}
+.skills .skills-icon .normal{
+  width: 55px;
+  height: 50px;
+}
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
