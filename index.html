@@ -26,6 +26,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/custom.css" rel="stylesheet">
 
 </head>
 
@@ -39,7 +40,7 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle profile">
+        <img src="assets/img/profile-img1.png" alt="" class="img-fluid rounded-circle profile">
         <h1 class="text-light"><a href="index.html">Erik HO</a></h1>
         <div class="social-links mt-3 text-center">
           <a href="https://www.linkedin.com/in/erik-h-128893117" class="linkedin"><i class="bx bxl-linkedin"></i></a>
@@ -64,7 +65,7 @@
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
       <h1>HSIN HSIEN HO (Erik)</h1>
-      <p>I'm <span class="typed" data-typed-items="Software Engineer, Full-Stack Engineer"></span></p>
+      <p>I'm <span class="typed" data-typed-items="Backend Engineer, Full-Stack Engineer"></span></p>
     </div>
   </section><!-- End Hero -->
 
@@ -81,10 +82,10 @@
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/profile-img.png" class="img-fluid" alt="">
+            <img src="assets/img/profile-img2.png" class="img-fluid profile-img" alt="">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Full-Stack Engineer &amp; Software Engineer.</h3>
+            <h3>Backend Engineer</h3>
             <p class="fst-italic">
               Stay on your game and keep going for your dream because the world needs the special gift that only you have.
             </p>
@@ -122,11 +123,11 @@
 
         <div class="row skills-content">
 
-          <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="skills-inner">
               <div class="skills-icon">
                 <img src="assets/img/frontend3.png" alt="" class="frontend3">
-                <img src="assets/img/vue.png" alt="" class="normal">
+                <img src="assets/img/vue.png" alt="" class="normal" style="margin-left: 10px;">
               </div>
               <h5 class="skills-title"> FRONTEND <h3>
               <div class="skills-item">
@@ -139,22 +140,24 @@
               </div>
             </div>
           </div>
-          <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="skills-inner">
               <div class="skills-icon">
                 <img src="assets/img/fastapi.png" alt="" class="normal">
                 <img src="assets/img/flask.png" alt="" class="flask">
+                <img src="assets/img/nodejs.png" alt="" class="nodejs">
               </div>
               <h5 class="skills-title"> BACKEND <h3>
               <div class="skills-item">
                 <ul>
                   <li> FastAPI </li>
                   <li> Flask </li>
+                  <li> NodeJs </li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="skills-inner">
               <div class="skills-icon">
                 <img src="assets/img/nginx.png" alt="" class="nginx">
@@ -169,7 +172,22 @@
               </div>
             </div>
           </div>
-          <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="skills-inner">
+              <div class="skills-icon">
+                <img src="assets/img/postgres.png" alt="" class="postgres">
+                <img src="assets/img/mongo.png" alt="" class="mongo">
+              </div>
+              <h5 class="skills-title"> Database <h3>
+              <div class="skills-item">
+                <ul>
+                  <li> Postgres </li>
+                  <li> Mongo </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="skills-inner">
               <div class="skills-icon">
                 <img src="assets/img/docker.png" alt="" class="normal">
@@ -182,6 +200,19 @@
                   <li> Docker </li>
                   <li> Docker-Compose </li>
                   <li> K8S </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="skills-inner">
+              <div class="skills-icon">
+                <img src="assets/img/airflow.png" alt="" class="airflow">
+              </div>
+              <h5 class="skills-title"> ETL <h3>
+              <div class="skills-item">
+                <ul>
+                  <li> Airflow </li>
                 </ul>
               </div>
             </div>
@@ -226,12 +257,33 @@
               </ul>
             </div>
           </div>
+          <div class="col-lg-6" data-aos="fade-up">
+            <h3 class="resume-title">Side Projects</h3>
+            <div class="resume-item">
+              <h4>任務管理系統 - 超人幫手 SuperHandy</h4>
+              <h5>2023/03 - 2023/07</h5>
+              <br>
+              <a href="https://superhandy-frontend-fork.herokuapp.com/">
+                <img src="assets/img/superhandy.png" alt="Image 3" class="website-intro">
+              </a>
+              <p><em>Our mission is to empower individuals with superhuman abilities in their daily lives. This philosophy represents our commitment to providing a platform that makes it easy for users to find tasks they need help with, while also inspiring them to feel like superheroes who have the power to help others and increase their own self-worth.</em></p>
+              <ul>
+                <li><a href="https://github.com/erik1110/SuperHandy-frontend">前端</a></li>
+                <li><a href="https://github.com/erik1110/SuperHandy-backend">後端</a></li>
+              </ul>
+            </div>
+          </div>
           </div>
           <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
             <h3 class="resume-title">Work Experience</h3>
             <div class="resume-item">
+              <h4>Backend Engineer</h4>
+              <h5>2022/04 - Present</h5>
+              <p><em>Ad2iction, Taipei, Taiwan </em></p>
+            </div>
+            <div class="resume-item">
               <h4>Full-Stack Engineer</h4>
-              <h5>2022/03 - Present</h5>
+              <h5>2022/03 - 2023/03</h5>
               <p><em>E.SUN Commercial Bank, Ltd., Taipei, Taiwan </em></p>
               <ul>
                 <li>PyCon Speaker</li>
@@ -244,6 +296,44 @@
                 <li>Maintain Web Services</li>
                   <p>- Negative News System：Responsible for web pages, back-end and database.</p>
               </ul>
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="thumbnail">
+                      <a href="https://github.com/esun-ai/voting_system">
+                        <img src="assets/img/voting.png" alt="Image 1" class="website-intro">
+                        <div class="caption">
+                          <h4>Voting system</h4>
+                          <p>This system is a voting system that enables people who want to organize events and count votes to create and use voting services.</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="thumbnail">
+                      <a href="https://github.com/esun-ai/ai_arena">
+                        <img src="assets/img/ai_arena.png" alt="Image 2" class="website-intro">
+                        <div class="caption">
+                          <h4>AI Challenge Competition</h4>
+                          <p>人工智慧挑戰賽發題系統</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="thumbnail">
+                      <a href="https://www.youtube.com/watch?v=oD-FT_33yW4&ab_channel=PyConTaiwan">
+                        <img src="assets/img/pycon.png" alt="Image 3" class="website-intro">
+                        <div class="caption">
+                          <h4>實現超自動化的驗證碼辨識</h4>
+                          <p>PyCon APAC 2022</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                
             </div>
             <div class="resume-item">
               <h4>Software Engineer</h4>

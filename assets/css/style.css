@@ -448,6 +448,10 @@ section {
   width: 100px;
   height: 80px;
 }
+.skills .skills-icon .nodejs{
+  width: 100px;
+  height: 80px;
+}
 .skills .skills-icon .nginx{
   width: 100px;
   height: 50px;
@@ -455,6 +459,18 @@ section {
 .skills .skills-icon .gcp{
   width: 100px;
   height: 70px;
+}
+.skills .skills-icon .postgres{
+  width: 100px;
+  height: 70px;
+}
+.skills .skills-icon .mongo{
+  width: 70px;
+  height: 50px;
+}
+.skills .skills-icon .airflow{
+  width: 130px;
+  height: 50px;
 }
 .skills .skills-icon .normal{
   width: 55px;

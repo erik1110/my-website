@@ -1,0 +1,9 @@
+.profile-img {
+    border-radius: 5%;
+    background-size: cover; /* 調整圖片大小以符合容器的尺寸 */
+}
+.website-intro {
+    width: 300px;
+    height: 150px;
+    margin-bottom: 5px;
+}
