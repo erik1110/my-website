@@ -7,3 +7,24 @@
     height: 150px;
     margin-bottom: 5px;
 }
+
+.company-info {
+    display: flex;
+    align-items: center; /* 垂直居中 */
+  }
+  
+.company-logo {
+    width: 40px; /* 調整圖像寬度 */
+    height: auto; /* 自動調整高度，保持圖片比例 */
+    margin-right: 10px; /* 調整圖像與文本之間的距離 */
+}
+
+.company-info p {
+    margin: 0; /* 清除段落的預設邊距 */
+}
+
+.normal-image {
+    width: 55px; /* 調整圖片寬度 */
+    height: auto; /* 自動調整高度，保持圖片比例 */
+    margin-right: 10px; /* 調整圖片與文字之間的距離 */
+}
