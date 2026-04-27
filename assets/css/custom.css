@@ -1,30 +1,285 @@
+/*--------------------------------------------------------------
+# Custom Component Overrides
+--------------------------------------------------------------*/
+
+/* Profile image in About section */
 .profile-img {
-    border-radius: 5%;
-    background-size: cover; /* 調整圖片大小以符合容器的尺寸 */
-}
-.website-intro {
-    width: 300px;
-    height: 150px;
-    margin-bottom: 5px;
+  border-radius: 12px;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
 }
 
+/* -------------------------------------------------------
+   Thumbnail grid cards (col-lg-4 grids inside resume)
+   e.g. TNL / E.SUN project rows
+------------------------------------------------------- */
+.thumbnail {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  transition: all 0.25s;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.thumbnail:hover {
+  box-shadow: 0 6px 24px rgba(56,189,248,0.12);
+  border-color: rgba(56,189,248,0.35);
+  transform: translateY(-2px);
+}
+
+/* Images inside thumbnail cards — fixed, consistent height */
+.thumbnail .website-intro {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  flex-shrink: 0;
+}
+
+.thumbnail a {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.thumbnail .caption {
+  padding: 12px 14px;
+  flex: 1;
+}
+
+.thumbnail .caption h4 {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.thumbnail .caption p {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.45;
+}
+
+/* -------------------------------------------------------
+   Side project standalone images
+   (direct <a><img> links, NOT inside .thumbnail)
+   e.g. zodiac-catch.gif, nodejs-enterprise, hotel, superhandy
+------------------------------------------------------- */
+.resume-item > a > img.website-intro {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.25s, border-color 0.25s;
+}
+
+.resume-item > a > img.website-intro:hover {
+  box-shadow: 0 6px 24px rgba(56,189,248,0.14);
+  border-color: rgba(56,189,248,0.35);
+}
+
+/* -------------------------------------------------------
+   Company info row
+------------------------------------------------------- */
 .company-info {
-    display: flex;
-    align-items: center; /* 垂直居中 */
-  }
-  
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
 .company-logo {
-    width: 40px; /* 調整圖像寬度 */
-    height: auto; /* 自動調整高度，保持圖片比例 */
-    margin-right: 10px; /* 調整圖像與文本之間的距離 */
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: var(--section-alt);
+  padding: 3px;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
 }
 
 .company-info p {
-    margin: 0; /* 清除段落的預設邊距 */
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-secondary);
 }
 
+/* Skills icon sizing */
 .normal-image {
-    width: 55px; /* 調整圖片寬度 */
-    height: auto; /* 自動調整高度，保持圖片比例 */
-    margin-right: 10px; /* 調整圖片與文字之間的距離 */
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
+
+/* Skill set tag inside resume */
+.resume-item strong {
+  color: var(--text-primary);
+}
+
+/* -------------------------------------------------------
+   Project sub-heading labels inside experience lists
+   e.g. "Cr.ED Backend Developer", "UFO Radio", etc.
+------------------------------------------------------- */
+.project-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.project-list > li:not(.project-label) {
+  padding-left: 20px;
+}
+
+li.project-label {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-primary);
+  background: var(--section-alt);
+  border-left: 3px solid var(--accent);
+  padding: 7px 14px;
+  border-radius: 0 6px 6px 0;
+  margin: 14px 0 8px -20px;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+}
+
+/* Inline language/abbreviation tag */
+.lang-tag {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 4px;
+  padding: 1px 6px;
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+}
+
+/* Ensure thumbnail grid cards are equal height within each row */
+.resume-item .container .row {
+  align-items: stretch;
+}
+
+.resume-item .container .row > [class*="col-"] {
+  display: flex;
+  margin-bottom: 0;
+}
+
+.resume-item .container .row > [class*="col-"] > .thumbnail {
+  flex: 1;
+}
+
+/* -------------------------------------------------------
+   Education score badges
+------------------------------------------------------- */
+.edu-score-row {
+  margin: 8px 0 12px;
+}
+
+.edu-score-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.04em;
+}
+
+.edu-score-badge.distinction {
+  color: #b45309;
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+}
+
+.edu-score-badge.distinction i {
+  color: #f59e0b;
+  font-size: 13px;
+}
+
+.edu-score-badge.gpa {
+  color: #065f46;
+  background: #d1fae5;
+  border: 1px solid #10b981;
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* -------------------------------------------------------
+   Languages block
+------------------------------------------------------- */
+.lang-cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lang-cert-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 16px;
+  transition: border-color 0.2s;
+}
+
+.lang-cert-item:hover {
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.lang-cert-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lang-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.lang-cert-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+
+.lang-score-badge {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 8px;
+  padding: 4px 14px;
+  letter-spacing: 0.04em;
+}
+
